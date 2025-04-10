@@ -35,6 +35,33 @@ public class App {
         } catch (Exception ex){
             System.out.println(erro);
         }
+
+        
+        public static void fazerTriangulo (int tam){
+            for(int i = 1; i <= tam; i++){
+                System.out.println();
+                for(int j = 1; j <= i; j++){
+                    System.out.print("* ");
+                }
+            }
+        }
+        public static void fazerLosangulo(int tam){
+            int a = 1;
+            int e = tam -1;
+            if (tam %2 == 0 || tam < 1){
+                System.out.println("\nPara formação de losangulos, infome um tamanho ímpar");
+            } else {
+                for (int j = 1; e / 2 > 0; j++) {
+                    for (int i = 1; i <= e / 2; i++) {
+                        System.out.print(" ");
+                    }
+                    for (int i = 1; i <= a; i++) {
+                        System.out.print("*");
+                    }
+                    e = e - 2;
+                    a = a + 2;
+                    System.out.println();
+                }
     }
         }
 
