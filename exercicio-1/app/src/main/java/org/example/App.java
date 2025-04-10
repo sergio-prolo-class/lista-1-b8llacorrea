@@ -7,21 +7,36 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        String losango;
-        String triangulo;
-        String retangulo;
+        // para verificar se foi escrito certo a string.
+        String erro = "Forma de uso incorreta.\nForma correta:\nPara triangulos e losangulos -> 'gradle run --args '{forma} {tamanho}'\nPara quadrados -> 'gradle run --args '{forma} {altura} {largura}'";
 
-        // caso ele responda algo inválido
-        do {
-            System.out.print("Entre com a forma: ");
+        // erros que podem acontecer.
+        try {
             String forma = args[0];
-            int num = args[1];
-        } while (num < 0);
-
-        for ()
-//        System.out.print("Entre com uma forma: ");
-//        int forma = teclado.nextInt();
-
+            int tamanho = Integer.parseInt(args[1]); // convertendo de String para Int
+            if (tamanho < 1) {
+                System.out.println("Errado. Tente novamente.");
+            }
+            switch (forma.toLowerCase()) {
+                case "triangulo":
+                    fazerTriangulo(tamanho);
+                    break;
+                case "losangulo":
+                    fazerLosangulo(tamanho);
+                    break;
+                case "quadrado":
+                    int largura = Integer.parseInt(args[2]);
+                    fazerQuadrado(tamanho, largura);
+                    break;
+                default:
+                    System.out.println(erro);
+                    break;
+            }
+        } catch (Exception ex){
+            System.out.println(erro);
+        }
+    }
+        }
 
     }
 }
