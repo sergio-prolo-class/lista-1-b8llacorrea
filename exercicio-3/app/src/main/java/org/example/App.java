@@ -4,11 +4,27 @@
 package org.example;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
+        char frota[][] = new char[10][10];
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                frota[i][j] = '.';
+            }
+        }
+
+        char[] navios = {'P', 'E', 'C', 'S', 'N'};
+        int[] tamanhosN = {5, 4, 3, 3, 2};
+
+        for (int i = 0; i < navios.length; i++) {
+            frota = ///colocaNavio(frota, tamanhosN[i], navios[i]);
+        }
+
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                System.out.print(frota[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
