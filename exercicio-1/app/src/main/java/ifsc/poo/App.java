@@ -26,7 +26,7 @@ public class App {
                     break;
                 case "quadrado":
                     int largura = Integer.parseInt(args[2]);
-                    fazerQuadrado(tamanho, largura);
+                    fazerRetangulo(tamanho, largura);
                     break;
                 default:
                     System.out.println(erro);
@@ -77,7 +77,7 @@ public class App {
         }
     }
 
-    public static void fazerQuadrado(int altura, int largura) {
+    public static void fazerRetangulo(int altura, int largura) {
     for (int i = 1; i <= largura; i++) {
         System.out.print("*");
     }
