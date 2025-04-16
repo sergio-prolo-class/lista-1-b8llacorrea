@@ -38,12 +38,12 @@ application {
     mainClass = 'ifsc.poo.App'
 }
 
-//jar {
-//    manifest {
-//         // Pacote e classe Java que contém main
-//         attributes 'Main-Class': 'ifsc.poo.App'
-//    }
-//}
+jar {
+    manifest {
+         // Pacote e classe Java que contém main
+         attributes 'Main-Class': 'ifsc.poo.App'
+    }
+}
 
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
