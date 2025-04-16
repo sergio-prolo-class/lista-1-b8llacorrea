@@ -8,7 +8,7 @@ public class App {
     public static void main(String[] args) {
 
         // verificar se foi escrito certo a string.
-        String erro = "Forma de uso incorreta.\nForma correta:\nPara triangulos e losangulos -> 'gradle run --args '{forma} {tamanho}'\nPara quadrados -> 'gradle run --args '{forma} {altura} {largura}'";
+        String erro = "Forma de uso incorreta.\nForma correta:\nPara triangulos e losangulos -> 'gradle run --args '{forma} {tamanho}'\nPara retangulo -> 'gradle run --args '{forma} {altura} {largura}'";
 
         // erros que podem acontecer.
         try {
