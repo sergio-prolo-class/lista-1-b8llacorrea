@@ -30,7 +30,7 @@ public class App {
         }
     }
 
-    public static char[][] colocarNavio (int tamanhoN, char[][] frota, char navios) {
+    public static char[][] colocarNavio(int tamanhoN, char[][] frota, char navios) {
         // sortear primeira posição (dois numeros sorteados = valor de I e valor de J)
         // Verificar se a posicao + o tamanhoN, se ela é menor do que 10.
         // verificar se a tem um ponto no lugar (i e j != ".")
@@ -63,7 +63,10 @@ public class App {
                 }
             }
         } while (sobrescreveNavio || excedeTamanho);
-        
 
+        for (int i = x; i < x + tamanhoN; i++) {
+            frota[i][y] = navios;
+        }
+        return frota;
     }
 }
