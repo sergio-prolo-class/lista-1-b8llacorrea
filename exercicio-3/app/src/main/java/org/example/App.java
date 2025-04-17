@@ -38,5 +38,32 @@ public class App {
         // Para cada ponto eu troco para letra do navio, da posicao inicial (i) + o tamanhoN
         // se não for válido, ele tenta sortear de novo (até conseguir).
 
+        int x = 0;
+        int y = 0;
+        boolean excedeTamanho = false;
+        boolean sobrescreveNavio = false;
+
+        // posicao válida
+        do {
+            excedeTamanho = false;
+            sobrescreveNavio = false;
+
+            Random sorteador = new Random();
+            x = sorteador.nextInt(0, 10);
+            y = sorteador.nextInt(0, 10);
+
+            if (tamanhoN + x > 10) {
+                excedeTamanho = true;
+            } else {
+                for (int i = x; i < x + tamanhoN; i++) {
+                    if (frota[i][y] != '.') {
+                        sobrescreveNavio = true;
+                        break;
+                    }
+                }
+            }
+        } while (sobrescreveNavio || excedeTamanho);
+        
+
     }
 }
