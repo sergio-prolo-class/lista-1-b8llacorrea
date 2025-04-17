@@ -3,6 +3,8 @@
  */
 package org.example;
 
+import java.util.Random;
+
 public class App {
     public static void main(String[] args) {
 
@@ -17,7 +19,7 @@ public class App {
         int[] tamanhosN = {5, 4, 3, 3, 2};
 
         for (int i = 0; i < navios.length; i++) {
-            frota = ///colocaNavio(frota, tamanhosN[i], navios[i]);
+            frota = colocarNavio(tamanhosN[i], frota, navios[i]);
         }
 
         for (int i = 0; i < 10; i++) {
@@ -26,5 +28,15 @@ public class App {
             }
             System.out.println();
         }
+    }
+
+    public static char[][] colocarNavio (int tamanhoN, char[][] frota, char navios) {
+        // sortear primeira posição (dois numeros sorteados = valor de I e valor de J)
+        // Verificar se a posicao + o tamanhoN, se ela é menor do que 10.
+        // verificar se a tem um ponto no lugar (i e j != ".")
+        // Criar um for para não haver empate de navio.
+        // Para cada ponto eu troco para letra do navio, da posicao inicial (i) + o tamanhoN
+        // se não for válido, ele tenta sortear de novo (até conseguir).
+
     }
 }
