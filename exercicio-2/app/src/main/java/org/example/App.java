@@ -5,7 +5,7 @@ package org.example;
 
 public class App {
     public static void main(String[] args) {
-
+        // fazer tres switch para as faixas
+        // eu preciso verificar 
     }
 }
-
