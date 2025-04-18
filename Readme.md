@@ -14,7 +14,7 @@ Neste exercicio entre com o forma e depois com o valor
 ```gradle run --args "losango * "``` (*: A dimenção do losango 
 deve ser impar.) 
  
-```gradle run --args "Retangulo *""``` (*: Altura e a largura.) 
+```gradle run --args "Retangulo * * "``` (*: Altura e a largura.) 
  
  
 ### Exercicio 2 
@@ -39,5 +39,7 @@ deve ser impar.)
  
  
 ### Exercicio 3 
+
+Neste jogo de batalha naval você irá entrar com ```gradle run```
  
-```gradle run``` 
+ 
