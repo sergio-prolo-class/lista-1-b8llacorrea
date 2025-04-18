@@ -8,7 +8,7 @@ public class App {
     public static void main(String[] args) {
 
         // verificar se foi escrito certo a string.
-        String erro = "Forma de uso incorreta.\nForma correta:\nPara triangulos e losangulos -> 'gradle run --args '{forma} {tamanho}'\nPara retangulo -> 'gradle run --args '{forma} {altura} {largura}'";
+        String erro = "Forma de uso incorreta.\nForma correta:\nPara triangulos e losango -> 'gradle run --args '{forma} {tamanho}'\nPara retangulo -> 'gradle run --args '{forma} {altura} {largura}'";
 
         // erros que podem acontecer.
         try {
@@ -21,8 +21,8 @@ public class App {
                 case "triangulo":
                     fazerTriangulo(tamanho);
                     break;
-                case "losangulo":
-                    fazerLosangulo(tamanho);
+                case "losango":
+                    fazerLosango(tamanho);
                     break;
                 case "quadrado":
                     int largura = Integer.parseInt(args[2]);
@@ -41,16 +41,16 @@ public class App {
         for (int i = 1; i <= tamanho; i++) {
             System.out.println();
             for (int j = 1; j <= i; j++) {
-                System.out.print("* ");
+                System.out.println("* ");
             }
         }
     }
 
-    public static void fazerLosangulo(int tamanho) {
+    public static void fazerLosango(int tamanho) {
         int asteristicos = 1;
         int espaco = tamanho - 1;
         if (tamanho % 2 == 0 || tamanho < 1) {
-            System.out.println("\nPor favor, para formação de losangulos, infome um tamanho ímpar");
+            System.out.println("\nPor favor, para formação de losango, infome um tamanho ímpar");
         } else {
             for (int j = 1; espaco / 2 > 0; j++) {
                 for (int i = 1; i <= espaco / 2; i++) {
